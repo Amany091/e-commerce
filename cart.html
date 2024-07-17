@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="imgs/istockphoto-1172893073-612x612.jpg" alt="">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="About.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="wish.html">Wishlist </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="cart.html">Cart </a>
+                    </li>
+                </ul>
+                <a href="user.html" class="position-relative text-dark">
+                    <i class="fa-regular fa-user mx-2 fa-1x"></i>
+                </a>
+                <a href="cart.html" class="position-relative text-dark">
+                    <i class="fa-solid fa-cart-shopping mx-2 fa-1x"></i>
+                </a>
+                <!-- Btns Register and Login -->
+                <div id="registerBtn" class="registerBtn">
+                    <a href="signup.html"> Sign Up </a>
+                    <a href="login.html"> Login </a>
+                </div>
+                <div class="logOut">
+                    <a id="logoutBtn" class="d-none">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="d-flex justify-content-center mt-4 mx-5">
+        <div class="heading ">
+            <h2 class="text-center border-bottom  pb-3 mb-5">
+                Get Your <span class="text-main ">Cart</span>
+            </h2>
+        </div>
+    </div>
+    <section class="bg-main-light py-4 rounded-2 px-5">
+        <div class="summary d-flex justify-content-between align-items-center py-3">
+            <p class='fs-3 fw-bold m-0'>Total Price : <span class='text-main'></span></p>
+            <button class="btn btn-danger" onClick=clearCart()>
+                Clear All
+            </button>
+        </div>
+        <div class="container pt-5">
+            <div class="row g-4" id="cart-container">
+                <!-- المنتجات سيتم إضافتها هنا -->
+            </div>
+        </div>
+        <a to='/checkout' class='btn btn-success mt-4 w-75 mx-auto p-2 fs-4 fw-bold d-block '>Checkout
+        </a>
+    </section>
+    <script src="jS/bootstrap.bundle.min.js"></script>
+    <script src="./js//main.js"></script>
+</body>
+
+</html>

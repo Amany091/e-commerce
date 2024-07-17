@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <section id="login" class="py-2">
+        <div class="container rounded rounded-3 bg-white py-4 d-flex justify-content-center align-items-center shadow">
+            <div class="row ">
+                <div class="col-lg-12 text-center">
+                    <h1 class="mb-3">Smart Login System</h1>
+                    <div class="inputs">
+                        <div class="email-sec  d-flex justify-content-center align-items-center  mb-4">
+                            <i class="fa-solid fa-envelope me-3"></i>
+                            <input type="email" name="" id="signInEmail" class="form-control rounded rounded-5"
+                                placeholder="Enter Your Email">
+                        </div>
+                        <div class="password-sec  d-flex justify-content-center align-items-center  mb-4">
+                            <i class="fa-solid fa-lock me-3"></i>
+                            <input type="password" name="" id="signInPassword"
+                                class="login form-control rounded rounded-5" placeholder="Enter Your Password">
+                        </div>
+                        <span class="wrong d-none text-danger text-center">All Inputs Are Required!</span>
+                        <span class="passed d-none text-success text-center">Success!</span>
+                        <span class="wrongLogin d-none text-danger text-center">Incorrect Password or Email!</span>
+                        <button type="button" class="btn text-white my-3" id="singIn" onclick="logIn()">Login</button>
+                        <p>Don’t have an account? <a href="./signup.html"
+                                class="sign text-black text-decoration-none">Sign Up</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/bootstrap.bundle.min.js "></script>
+    <script src="./js/main.js "></script>
+</body>
+
+</html>

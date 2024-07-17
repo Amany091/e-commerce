@@ -1,0 +1,251 @@
+:root {
+    --skin-color: #f8aeaa;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+i {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* ========== Nav Bar  ========== */
+
+nav {
+    padding: 10px !important;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+
+}
+
+nav a img {
+    width: 60px;
+}
+
+nav ul li a {
+    font-size: 18px !important;
+}
+
+nav ul li a.active {
+    color: var(--skin-color) !important;
+}
+
+
+
+nav button {
+    border: none;
+}
+
+nav i {
+    color: #f8aeaa;
+    font-size: 24px !important;
+    opacity: 0.5;
+}
+
+nav .registerBtn a,
+nav .logOut a {
+    background-color: #f8aeaa;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin: 10px 5px;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+nav .registerBtn a:hover,
+nav .logOut a:hover {
+    letter-spacing: 1px;
+    transition: all 0.5s ease;
+    opacity: 0.7;
+    background-color: #f5746e;
+}
+
+.nav-link:active {
+    background-color: #eca0a0;
+}
+
+header {
+    margin-top: 120px;
+}
+
+.main {
+    background-color: #eca0a0;
+    height: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+h1 {
+    color: black;
+}
+
+.countBuy {
+    background-color: black;
+    color: white;
+}
+
+.countBuy:hover {
+    background-color: #8c5252;
+    color: white;
+}
+
+.category-card {
+    text-align: center;
+    padding: 10px;
+}
+
+.category-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+
+.navbar-toggler {
+    border: 1px solid var(--skin-color);
+
+
+}
+
+.navbar-toggler:focus {
+
+    box-shadow: 0 0 0 var(--skin-color);
+}
+
+.products {
+
+    padding: 100px 0;
+}
+
+.products .item {
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+.products .item img {
+    display: block;
+    margin: auto;
+    width: 70% !important;
+    text-align: center;
+    height: 200px;
+}
+
+.products .item h3 {
+    margin: 15px 0;
+}
+
+.products .item p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.products .item .icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.products .item:hover {
+    transition: all 0.5s;
+    border-color: var(--skin-color);
+}
+
+#cardColor {
+    color: #eca0a0;
+}
+
+/* Login & Register*********************************************************** */
+
+#login .container,
+#sign .container {
+    width: fit-content;
+    padding-inline: 80px;
+    margin-top: 120px;
+    height: 400px;
+}
+
+#login h1,
+#sign h1 {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+#login .inputs i,
+#sign .inputs i {
+    background-color: #fb8959;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sign .btn,
+#login .btn {
+    background-color: #fb8959;
+    transition: all 0.4s;
+}
+
+#sign .btn:hover,
+#login .btn:hover {
+    background-color: #e66229;
+}
+
+#sign .inputs input:focus,
+#login .inputs input:focus {
+    box-shadow: 0 0 0 0.25rem #f2a17e;
+}
+
+#sign p,
+#login p {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+#sign p a:hover,
+#login p a:hover {
+    text-decoration: underline !important;
+}
+
+.rules {
+    font-size: 11px;
+    font-style: italic;
+}
+
+.text-main {
+    color: #f8aeaa;
+}
