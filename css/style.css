@@ -184,6 +184,10 @@ h1 {
     border-color: var(--skin-color);
 }
 
+.product img {
+    cursor: pointer;
+}
+
 #cardColor {
     color: #eca0a0;
 }
@@ -248,4 +252,46 @@ h1 {
 
 .text-main {
     color: #f8aeaa;
+}
+
+/* ================================================= */
+
+.details {
+    margin-top: 7rem;    
+}
+
+.details .images img {
+    width: 28%;
+    object-fit: contain;
+}
+
+/* .details .product-image img {
+    border-radius: 50%;
+} */
+
+.details .review i {
+    font-size: 13px;
+    color: #fb8959;
+}
+
+.details button:hover {
+    background-color: #f2a17e;
+    transition: background-color .8s ease-in-out;
+    border: 1px solid #f2a17e;
+}
+
+/* //////////////////////////// */
+.contact .row > div{
+    height: 100vh;
+}
+.contact  .company-info{
+    background-color: #eca0a0;
+}
+
+.contact .social i {
+    margin-right: 10px;
+}
+
+.contact button {
+    background-color: #eca0a0;
 }

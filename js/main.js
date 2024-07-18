@@ -1,9 +1,17 @@
 async function getProducts() {
-  let data = await fetch("https://fakestoreapi.com/products");
+  let data = await fetch("https://ecommerce.routemisr.com/api/v1/products");
   let res = await data.json();
 
-  console.log(res);
-  displayProducts(res);
+  displayProducts(res.data);
+
+  // show details of product when clicking on its img
+  document.querySelectorAll("#containerProducts .product img").forEach(product => {
+    product.addEventListener("click", (e) => {
+      let index = e.target.closest(".product").getAttribute("data-index")
+      saveDetailsToLocalStorage(res.data[index]) // get the object by its index and save it to local storage
+      window.location.href = "./../details.html"
+     })
+  })
 }
 getProducts();
 function scrollToProducts() {
@@ -12,32 +20,36 @@ function scrollToProducts() {
     .scrollIntoView({ behavior: "smooth" });
 }
 
+function saveDetailsToLocalStorage(product) {
+  localStorage.setItem("details", JSON.stringify(product))
+}
+
+// show api 
 function displayProducts(products) {
   let container = "";
-  products.map((product) => {
+  products.map((product, index) => {
     container = `
-      <div class="col-md-4">
+      <div class="col-md-4 product" data-index=${index} >
         <div class="item">
-          <img src="${product.image}" class="w-100">
-          <h5>${product.title.split(" ").slice(0, 3).join(" ")}</h5>
+          <img src="${product.imageCover}" class="w-100 ">
+          <h5>${product.slug.split(" ").slice(0, 3).join(" ")}</h5>
           <p>${Math.round(product.price)} EGP</p>
           <div class="icons">
             <i class="fa-solid fa-heart"></i>
-            <i class="fa-solid fa-cart-shopping" id="cardColor" onclick="addToCart(${
-              product.id
-            })"></i>
+            <i class="fa-solid fa-cart-shopping" id="cardColor" onclick="addToCart('${product._id}')"></i>
           </div>
         </div>
       </div>`;
 
     document.getElementById("containerProducts").innerHTML += container;
   });
+  
 }
 
 async function addToCart(productId) {
   try {
     const response = await fetch(
-      `https://fakestoreapi.com/products/${productId}`
+      `https://ecommerce.routemisr.com/api/v1/products/${productId}`
     );
     if (!response.ok) {
       throw new Error("Network response was not ok");
@@ -45,22 +57,28 @@ async function addToCart(productId) {
 
     const product = await response.json();
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
+    console.log(product.data)
     // إضافة المنتج إلى السلة
-    cart.push(product);
+    cart.push(product.data);
     localStorage.setItem("cart", JSON.stringify(cart));
 
-    console.log("تمت إضافة المنتج إلى السلة:", product);
+    console.log("تمت إضافة المنتج إلى السلة:", product.data);
     window.alert("product added successfully to Cart");
+    countCarts()
   } catch (error) {
     console.error("كانت هناك مشكلة في عملية الجلب:", error);
   }
 }
 
-function displayCart() {
+// get the number of products that are saved to local storage
+function countCarts() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  document.querySelector(".carts").innerText = cart.length
+}
+
+ function displayCart() {
   try {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
     const cartContainer = document.getElementById("cart-container");
     cartContainer.innerHTML = "";
     let totalPrice = 0;
@@ -74,7 +92,7 @@ function displayCart() {
                     <div class="row align-items-center">
                       <div class="col-2">
                         <img
-                          src=${product.image}
+                          src=${product.imageCover}
                           alt="cart-product"
                           class="w-100 object-fit-cover"
                         />
@@ -97,7 +115,7 @@ function displayCart() {
     });
     document.querySelector(".summary p span").innerText = `${totalPrice} EGP`;
   } catch (error) {
-    console.error(error);
+    // console.error(error);
   }
 }
 function removeFromCart(index) {
@@ -105,13 +123,18 @@ function removeFromCart(index) {
   cart.splice(index, 1);
   localStorage.setItem("cart", JSON.stringify(cart));
   displayCart();
+  countCarts()
 }
 function clearCart() {
   localStorage.removeItem("cart");
   displayCart();
+  countCarts()
 }
 
-window.onload = displayCart;
+window.addEventListener("DOMContentLoaded", () => {
+  displayCart()
+  countCarts()
+})
 
 // ----------------------------------------------------------------------------
 
@@ -271,3 +294,8 @@ document.getElementById("logoutBtn").addEventListener("click", function () {
   localStorage.removeItem("userName");
   window.location.href = "login.html";
 });
+
+// --------------------- DISPLAY PRODUCT DETAILS -------------------------------------
+
+
+
