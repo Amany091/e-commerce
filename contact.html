@@ -1,53 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="./css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Contact</title>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg  fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="imgs/istockphoto-1172893073-612x612.jpg" alt="">
             </a>
-    
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="About.html">About</a>
+                        <a class="nav-link " aria-current="page" href="brands.html">Brands</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active " aria-current="page" href="contact.html">Contact Us</a>
+                        <a class="nav-link " aria-current="page" href="category.html">Categories</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item showWish d-none">
                         <a class="nav-link" aria-current="page" href="wish.html">Wishlist </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item showCart d-none">
                         <a class="nav-link" aria-current="page" href="cart.html">Cart </a>
                     </li>
                 </ul>
-                <a href="user.html" class="position-relative text-dark">
+                <a href="user.html" class="user position-relative d-none">
                     <i class="fa-regular fa-user mx-2 fa-1x"></i>
                 </a>
-                <a href="cart.html" class="position-relative text-dark">
-                    <i class="fa-solid fa-cart-shopping mx-2 fa-1x d-inline"></i>
-                    <p class="carts d-inline"></p> <!-- for carts length-->
+                <a href="cart.html" class="position-relative showCartI d-none">
+                    <i class="fa-solid fa-cart-shopping fa-1x"></i>
+                    <p class="carts d-inline position-absolute rounded rounded-circle "></p>
+                    <!-- for carts length-->
                 </a>
                 <!-- Btns Register and Login -->
                 <div id="registerBtn" class="registerBtn">
@@ -89,28 +97,34 @@
                         <div class="username d-flex justify-content-between my-2">
                             <div>
                                 <label for="name" class="d-block form-label">First Name</label>
-                            <input type="text" name="name" id="name" placeholder="Enter your first name" class="form-control">
+                                <input type="text" name="name" id="name" placeholder="Enter your first name"
+                                    class="form-control">
                             </div>
                             <div>
                                 <label for="name" class="d-block form-label">Last Name</label>
-                            <input type="text" name="name" id="name" placeholder="Enter your last name" class="form-control">
+                                <input type="text" name="name" id="name" placeholder="Enter your last name"
+                                    class="form-control">
                             </div>
                         </div>
                         <div class="company my-2">
                             <label for="company" class="d-block form-label">company</label>
-                            <input type="text" name="company" id="company" placeholder="Enter your company" class="form-control">
+                            <input type="text" name="company" id="company" placeholder="Enter your company"
+                                class="form-control">
                         </div>
                         <div class="email">
                             <label for="email" class="d-block form-label">Email</label>
-                            <input type="email" name="email" id="email" placeholder="Enter your email" class="form-control">
+                            <input type="email" name="email" id="email" placeholder="Enter your email"
+                                class="form-control">
                         </div>
                         <div class="phone my-2">
                             <label for="phone" class="d-block form-label">Phone number</label>
-                            <input type="tel" name="phone" id="phone" placeholder="Enter your phone" class="form-control">
+                            <input type="tel" name="phone" id="phone" placeholder="Enter your phone"
+                                class="form-control">
                         </div>
-                        <div class="meaage w-100 d-block "  >
+                        <div class="meaage w-100 d-block ">
                             <label for="message" class="d-block form-label">Message</label>
-                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Tell us what can help you with" class="w-100"></textarea>
+                            <textarea name="message" id="message" cols="30" rows="10"
+                                placeholder="Tell us what can help you with" class="w-100"></textarea>
                         </div>
                         <button class="btn d-block w-100 h-25">Send Message</button>
                     </form>
@@ -118,6 +132,10 @@
             </div>
         </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="jS/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
+
 </html>

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
@@ -11,11 +12,9 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Shop</title>
 </head>
 
 <body>
-    <!-- ========== Navbar  ========== -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
@@ -68,30 +67,18 @@
             </div>
         </div>
     </nav>
-    <!-- ========== Header ========== -->
-    <header class="d-flex align-items-center">
-        <div class="container">
-            <div class="main">
-                <div class="row justify-content-between align-items-center px-5">
-                    <div class="col-md-7  mt-5 text-center text-lg-start">
-                        <h1>Grab Up to 50% Off On<br /> Selected HeadPhone</h1>
-                        <button class="btn mt-2 countBuy rounded-pill" onclick="scrollToProducts()">Buy Now</button>
-                    </div>
-                    <div class="col-md-5 mt-5 text-center">
-                        <img src="imgs/photo.jpg" class="w-100" alt="">
-                    </div>
-                </div>
-            </div>
+    <div class=" head d-flex justify-content-center mx-5">
+        <div class="heading ">
+            <h2 class="text-center border-bottom  pb-3">
+                Get Your <span class="text-main ">Brands</span>
+            </h2>
         </div>
-    </header>
-
-    <section class="products" id="productsSection">
-        <div class="container">
-            <h2 class="section-title ">Products</h2>
-            <div class="row mt-4 g-3" id="containerProducts">
-            </div>
+    </div>
+    <div class="container pt-2">
+        <div class="row g-4" id="brands-container">
+            <!-- المنتجات سيتم إضافتها هنا -->
         </div>
-    </section>
+    </div>
     <script src="jS/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>

@@ -55,7 +55,8 @@ nav ul li a {
     font-size: 18px !important;
 }
 
-nav ul li a.active {
+
+nav .nav-link.active {
     color: var(--skin-color) !important;
 }
 
@@ -68,7 +69,7 @@ nav button {
 nav i {
     color: #f8aeaa;
     font-size: 24px !important;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 nav .registerBtn a,
@@ -92,12 +93,28 @@ nav .logOut a:hover {
     background-color: #f5746e;
 }
 
-.nav-link:active {
-    background-color: #eca0a0;
+nav .carts {
+    color: white;
+    background-color: #f8aeaa;
+    top: -13px;
+    right: -4px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
 }
 
 header {
     margin-top: 120px;
+}
+
+@media (max-width: 992px) {
+    header h1 {
+        font-size: 1rem;
+    }
+
+    header .btn {
+        width: 100%;
+    }
 }
 
 .main {
@@ -130,6 +147,11 @@ h1 {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+}
+
+.cat {
+    object-fit: cover;
+    height: 300px !important;
 }
 
 
@@ -209,7 +231,6 @@ h1 {
 
 #login .inputs i,
 #sign .inputs i {
-    background-color: #fb8959;
     color: white;
     width: 30px;
     height: 30px;
@@ -221,13 +242,12 @@ h1 {
 
 #sign .btn,
 #login .btn {
-    background-color: #fb8959;
     transition: all 0.4s;
 }
 
 #sign .btn:hover,
 #login .btn:hover {
-    background-color: #e66229;
+    background-color: #d78383;
 }
 
 #sign .inputs input:focus,
@@ -254,10 +274,36 @@ h1 {
     color: #f8aeaa;
 }
 
+.bg-main {
+    background-color: #f8aeaa;
+    border-radius: 5px;
+}
+
+.head {
+    margin-top: 130px;
+}
+
+.heart-icon {
+    color: black;
+}
+
+.heart-icon.added-to-wishlist {
+    color: #f8aeaa;
+}
+
+.welcome-sec {
+    margin-top: 150px;
+}
+
+.welcome-sec img {
+    width: 200px;
+
+}
+
 /* ================================================= */
 
 .details {
-    margin-top: 7rem;    
+    margin-top: 7rem;
 }
 
 .details .images img {
@@ -274,17 +320,24 @@ h1 {
     color: #fb8959;
 }
 
+.details button {
+    transition: all 0.5s ease;
+    width: 150px;
+}
+
+
 .details button:hover {
-    background-color: #f2a17e;
-    transition: background-color .8s ease-in-out;
-    border: 1px solid #f2a17e;
+    letter-spacing: 1px;
+    opacity: 0.7;
+    background-color: #f5746e;
 }
 
 /* //////////////////////////// */
-.contact .row > div{
+.contact .row>div {
     height: 100vh;
 }
-.contact  .company-info{
+
+.contact .company-info {
     background-color: #eca0a0;
 }
 

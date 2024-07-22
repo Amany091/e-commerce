@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
-        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Login</title>
 </head>
 
@@ -20,19 +22,20 @@
                     <h1 class="mb-3">Smart Login System</h1>
                     <div class="inputs">
                         <div class="email-sec  d-flex justify-content-center align-items-center  mb-4">
-                            <i class="fa-solid fa-envelope me-3"></i>
+                            <i class="fa-solid fa-envelope me-3 bg-main"></i>
                             <input type="email" name="" id="signInEmail" class="form-control rounded rounded-5"
                                 placeholder="Enter Your Email">
                         </div>
                         <div class="password-sec  d-flex justify-content-center align-items-center  mb-4">
-                            <i class="fa-solid fa-lock me-3"></i>
+                            <i class="fa-solid fa-lock me-3 bg-main"></i>
                             <input type="password" name="" id="signInPassword"
                                 class="login form-control rounded rounded-5" placeholder="Enter Your Password">
                         </div>
                         <span class="wrong d-none text-danger text-center">All Inputs Are Required!</span>
                         <span class="passed d-none text-success text-center">Success!</span>
                         <span class="wrongLogin d-none text-danger text-center">Incorrect Password or Email!</span>
-                        <button type="button" class="btn text-white my-3" id="singIn" onclick="logIn()">Login</button>
+                        <button type="button" class="btn text-white my-3 bg-main" id="singIn"
+                            onclick="logIn()">Login</button>
                         <p>Don’t have an account? <a href="./signup.html"
                                 class="sign text-black text-decoration-none">Sign Up</a></p>
                     </div>
@@ -41,8 +44,10 @@
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="./js/main.js "></script>
+    <script src="jS/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
